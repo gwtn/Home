@@ -1,365 +1,245 @@
-# Editor.md
+---
+__Advertisement :)__
 
-![](https://pandao.github.io/editor.md/images/logos/editormd-logo-180x180.png)
+- __[pica](https://nodeca.github.io/pica/demo/)__ - high quality and fast image
+  resize in browser.
+- __[babelfish](https://github.com/nodeca/babelfish/)__ - developer friendly
+  i18n with plurals support and easy syntax.
 
-![](https://img.shields.io/github/stars/pandao/editor.md.svg) ![](https://img.shields.io/github/forks/pandao/editor.md.svg) ![](https://img.shields.io/github/tag/pandao/editor.md.svg) ![](https://img.shields.io/github/release/pandao/editor.md.svg) ![](https://img.shields.io/github/issues/pandao/editor.md.svg) ![](https://img.shields.io/bower/v/editor.md.svg)
+You will like those projects!
 
-**目录 (Table of Contents)**
+---
 
-[TOCM]
+# h1 Heading 8-)
+## h2 Heading
+### h3 Heading
+#### h4 Heading
+##### h5 Heading
+###### h6 Heading
 
-[TOC]
 
-# Heading 1
-## Heading 2               
-### Heading 3
-#### Heading 4
-##### Heading 5
-###### Heading 6
-# Heading 1 link [Heading link](https://github.com/pandao/editor.md "Heading link")
-## Heading 2 link [Heading link](https://github.com/pandao/editor.md "Heading link")
-### Heading 3 link [Heading link](https://github.com/pandao/editor.md "Heading link")
-#### Heading 4 link [Heading link](https://github.com/pandao/editor.md "Heading link") Heading link [Heading link](https://github.com/pandao/editor.md "Heading link")
-##### Heading 5 link [Heading link](https://github.com/pandao/editor.md "Heading link")
-###### Heading 6 link [Heading link](https://github.com/pandao/editor.md "Heading link")
+## Horizontal Rules
 
-#### 标题（用底线的形式）Heading (underline)
+___
 
-This is an H1
-=============
+---
 
-This is an H2
--------------
+***
 
-### 字符效果和横线等
-                
-----
 
-~~删除线~~ <s>删除线（开启识别HTML标签时）</s>
-*斜体字*      _斜体字_
-**粗体**  __粗体__
-***粗斜体*** ___粗斜体___
+## Typographic replacements
 
-上标：X<sub>2</sub>，下标：O<sup>2</sup>
+Enable typographer option to see result.
 
-**缩写(同HTML的abbr标签)**
+(c) (C) (r) (R) (tm) (TM) (p) (P) +-
 
-> 即更长的单词或短语的缩写形式，前提是开启识别HTML标签时，已默认开启
+test.. test... test..... test?..... test!....
 
-The <abbr title="Hyper Text Markup Language">HTML</abbr> specification is maintained by the <abbr title="World Wide Web Consortium">W3C</abbr>.
+!!!!!! ???? ,,  -- ---
 
-### 引用 Blockquotes
+"Smartypants, double quotes" and 'single quotes'
 
-> 引用文本 Blockquotes
 
-引用的行内混合 Blockquotes
-                    
-> 引用：如果想要插入空白换行`即<br />标签`，在插入处先键入两个以上的空格然后回车即可，[普通链接](http://localhost/)。
+## Emphasis
 
-### 锚点与链接 Links
+**This is bold text**
 
-[普通链接](http://localhost/)
+__This is bold text__
 
-[普通链接带标题](http://localhost/ "普通链接带标题")
+*This is italic text*
 
-直接链接：<https://github.com>
+_This is italic text_
 
-[锚点链接][anchor-id] 
+~~Strikethrough~~
 
-[anchor-id]: http://www.this-anchor-link.com/
 
-[mailto:test.test@gmail.com](mailto:test.test@gmail.com)
+## Blockquotes
 
-GFM a-tail link @pandao  邮箱地址自动链接 test.test@gmail.com  www@vip.qq.com
 
-> @pandao
+> Blockquotes can also be nested...
+>> ...by using additional greater-than signs right next to each other...
+> > > ...or with spaces between arrows.
 
-### 多语言代码高亮 Codes
 
-#### 行内代码 Inline code
+## Lists
 
-执行命令：`npm install marked`
+Unordered
 
-#### 缩进风格
++ Create a list by starting a line with `+`, `-`, or `*`
++ Sub-lists are made by indenting 2 spaces:
+  - Marker character change forces new list start:
+    * Ac tristique libero volutpat at
+    + Facilisis in pretium nisl aliquet
+    - Nulla volutpat aliquam velit
++ Very easy!
 
-即缩进四个空格，也做为实现类似 `<pre>` 预格式化文本 ( Preformatted Text ) 的功能。
+Ordered
 
-    <?php
-        echo "Hello world!";
-    ?>
-    
-预格式化文本：
+1. Lorem ipsum dolor sit amet
+2. Consectetur adipiscing elit
+3. Integer molestie lorem at massa
 
-    | First Header  | Second Header |
-    | ------------- | ------------- |
-    | Content Cell  | Content Cell  |
-    | Content Cell  | Content Cell  |
 
-#### JS代码　
+1. You can use sequential numbers...
+1. ...or keep all the numbers as `1.`
 
-```javascript
-function test() {
-	console.log("Hello world!");
-}
- 
-(function(){
-    var box = function() {
-        return box.fn.init();
-    };
+Start numbering with offset:
 
-    box.prototype = box.fn = {
-        init : function(){
-            console.log('box.init()');
+57. foo
+1. bar
 
-			return this;
-        },
 
-		add : function(str) {
-			alert("add", str);
+## Code
 
-			return this;
-		},
+Inline `code`
 
-		remove : function(str) {
-			alert("remove", str);
+Indented code
 
-			return this;
-		}
-    };
-    
-    box.fn.init.prototype = box.fn;
-    
-    window.box =box;
-})();
+    // Some comments
+    line 1 of code
+    line 2 of code
+    line 3 of code
 
-var testBox = box();
-testBox.add("jQuery").remove("jQuery");
+
+Block code "fences"
+
+```
+Sample text here...
 ```
 
-#### HTML 代码 HTML codes
+Syntax highlighting
 
-```html
-<!DOCTYPE html>
-<html>
-    <head>
-        <mate charest="utf-8" />
-        <meta name="keywords" content="Editor.md, Markdown, Editor" />
-        <title>Hello world!</title>
-        <style type="text/css">
-            body{font-size:14px;color:#444;font-family: "Microsoft Yahei", Tahoma, "Hiragino Sans GB", Arial;background:#fff;}
-            ul{list-style: none;}
-            img{border:none;vertical-align: middle;}
-        </style>
-    </head>
-    <body>
-        <h1 class="text-xxl">Hello world!</h1>
-        <p class="text-green">Plain text</p>
-    </body>
-</html>
+``` js
+var foo = function (bar) {
+  return bar++;
+};
+
+console.log(foo(5));
 ```
 
-### 图片 Images
+## Tables
 
-Image:
+| Option | Description |
+| ------ | ----------- |
+| data   | path to data files to supply the data that will be passed into templates. |
+| engine | engine to be used for processing templates. Handlebars is the default. |
+| ext    | extension to be used for dest files. |
 
-![](https://pandao.github.io/editor.md/examples/images/4.jpg)
+Right aligned columns
 
-> Follow your heart.
+| Option | Description |
+| ------:| -----------:|
+| data   | path to data files to supply the data that will be passed into templates. |
+| engine | engine to be used for processing templates. Handlebars is the default. |
+| ext    | extension to be used for dest files. |
 
-![](https://pandao.github.io/editor.md/examples/images/8.jpg)
 
-> 图为：厦门白城沙滩
+## Links
 
-图片加链接 (Image + Link)：
+[link text](http://dev.nodeca.com)
 
-[![](https://pandao.github.io/editor.md/examples/images/7.jpg)](https://pandao.github.io/editor.md/images/7.jpg "李健首张专辑《似水流年》封面")
+[link with title](http://nodeca.github.io/pica/demo/ "title text!")
 
-> 图为：李健首张专辑《似水流年》封面
-                
-----
+Autoconverted link https://github.com/nodeca/pica (enable linkify to see)
 
-### 列表 Lists
 
-#### 无序列表（减号）Unordered Lists (-)
-                
-- 列表一
-- 列表二
-- 列表三
-     
-#### 无序列表（星号）Unordered Lists (*)
+## Images
 
-* 列表一
-* 列表二
-* 列表三
+![Minion](https://octodex.github.com/images/minion.png)
+![Stormtroopocat](https://octodex.github.com/images/stormtroopocat.jpg "The Stormtroopocat")
 
-#### 无序列表（加号和嵌套）Unordered Lists (+)
-                
-+ 列表一
-+ 列表二
-    + 列表二-1
-    + 列表二-2
-    + 列表二-3
-+ 列表三
-    * 列表一
-    * 列表二
-    * 列表三
+Like links, Images also have a footnote style syntax
 
-#### 有序列表 Ordered Lists (-)
-                
-1. 第一行
-2. 第二行
-3. 第三行
+![Alt text][id]
 
-#### GFM task list
+With a reference later in the document defining the URL location:
 
-- [x] GFM task list 1
-- [x] GFM task list 2
-- [ ] GFM task list 3
-    - [ ] GFM task list 3-1
-    - [ ] GFM task list 3-2
-    - [ ] GFM task list 3-3
-- [ ] GFM task list 4
-    - [ ] GFM task list 4-1
-    - [ ] GFM task list 4-2
-                
-----
-                    
-### 绘制表格 Tables
+[id]: https://octodex.github.com/images/dojocat.jpg  "The Dojocat"
 
-| 项目        | 价格   |  数量  |
-| --------   | -----:  | :----:  |
-| 计算机      | $1600   |   5     |
-| 手机        |   $12   |   12   |
-| 管线        |    $1    |  234  |
-                    
-First Header  | Second Header
-------------- | -------------
-Content Cell  | Content Cell
-Content Cell  | Content Cell 
 
-| First Header  | Second Header |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+## Plugins
 
-| Function name | Description                    |
-| ------------- | ------------------------------ |
-| `help()`      | Display the help window.       |
-| `destroy()`   | **Destroy your computer!**     |
+The killer feature of `markdown-it` is very effective support of
+[syntax plugins](https://www.npmjs.org/browse/keyword/markdown-it-plugin).
 
-| Left-Aligned  | Center Aligned  | Right Aligned |
-| :------------ |:---------------:| -----:|
-| col 3 is      | some wordy text | $1600 |
-| col 2 is      | centered        |   $12 |
-| zebra stripes | are neat        |    $1 |
 
-| Item      | Value |
-| --------- | -----:|
-| Computer  | $1600 |
-| Phone     |   $12 |
-| Pipe      |    $1 |
-                
-----
+### [Emojies](https://github.com/markdown-it/markdown-it-emoji)
 
-#### 特殊符号 HTML Entities Codes
+> Classic markup: :wink: :crush: :cry: :tear: :laughing: :yum:
+>
+> Shortcuts (emoticons): :-) :-( 8-) ;)
 
-&copy; &  &uml; &trade; &iexcl; &pound;
-&amp; &lt; &gt; &yen; &euro; &reg; &plusmn; &para; &sect; &brvbar; &macr; &laquo; &middot; 
+see [how to change output](https://github.com/markdown-it/markdown-it-emoji#change-output) with twemoji.
 
-X&sup2; Y&sup3; &frac34; &frac14;  &times;  &divide;   &raquo;
 
-18&ordm;C  &quot;  &apos;
+### [Subscript](https://github.com/markdown-it/markdown-it-sub) / [Superscript](https://github.com/markdown-it/markdown-it-sup)
 
-[========]
+- 19^th^
+- H~2~O
 
-### Emoji表情 :smiley:
 
-> Blockquotes :star:
+### [\<ins>](https://github.com/markdown-it/markdown-it-ins)
 
-#### GFM task lists & Emoji & fontAwesome icon emoji & editormd logo emoji :editormd-logo-5x:
+++Inserted text++
 
-- [x] :smiley: @mentions, :smiley: #refs, [links](), **formatting**, and <del>tags</del> supported :editormd-logo:;
-- [x] list syntax required (any unordered or ordered list supported) :editormd-logo-3x:;
-- [x] [ ] :smiley: this is a complete item :smiley:;
-- [ ] []this is an incomplete item [test link](#) :fa-star: @pandao; 
-- [ ] [ ]this is an incomplete item :fa-star: :fa-gear:;
-    - [ ] :smiley: this is an incomplete item [test link](#) :fa-star: :fa-gear:;
-    - [ ] :smiley: this is  :fa-star: :fa-gear: an incomplete item [test link](#);
- 
-#### 反斜杠 Escape
 
-\*literal asterisks\*
+### [\<mark>](https://github.com/markdown-it/markdown-it-mark)
 
-[========]
-            
-### 科学公式 TeX(KaTeX)
+==Marked text==
 
-$$E=mc^2$$
 
-行内的公式$$E=mc^2$$行内的公式，行内的$$E=mc^2$$公式。
+### [Footnotes](https://github.com/markdown-it/markdown-it-footnote)
 
-$$x > y$$
+Footnote 1 link[^first].
 
-$$\(\sqrt{3x-1}+(1+x)^2\)$$
-                    
-$$\sin(\alpha)^{\theta}=\sum_{i=0}^{n}(x^i + \cos(f))$$
+Footnote 2 link[^second].
 
-多行公式：
+Inline footnote^[Text of inline footnote] definition.
 
-```math
-\displaystyle
-\left( \sum\_{k=1}^n a\_k b\_k \right)^2
-\leq
-\left( \sum\_{k=1}^n a\_k^2 \right)
-\left( \sum\_{k=1}^n b\_k^2 \right)
-```
+Duplicated footnote reference[^second].
 
-```katex
-\displaystyle 
-    \frac{1}{
-        \Bigl(\sqrt{\phi \sqrt{5}}-\phi\Bigr) e^{
-        \frac25 \pi}} = 1+\frac{e^{-2\pi}} {1+\frac{e^{-4\pi}} {
-        1+\frac{e^{-6\pi}}
-        {1+\frac{e^{-8\pi}}
-         {1+\cdots} }
-        } 
-    }
-```
+[^first]: Footnote **can have markup**
 
-```latex
-f(x) = \int_{-\infty}^\infty
-    \hat f(\xi)\,e^{2 \pi i \xi x}
-    \,d\xi
-```
+    and multiple paragraphs.
 
-### 分页符 Page break
+[^second]: Footnote text.
 
-> Print Test: Ctrl + P
 
-[========]
+### [Definition lists](https://github.com/markdown-it/markdown-it-deflist)
 
-### 绘制流程图 Flowchart
+Term 1
 
-```flow
-st=>start: 用户登陆
-op=>operation: 登陆操作
-cond=>condition: 登陆成功 Yes or No?
-e=>end: 进入后台
+:   Definition 1
+with lazy continuation.
 
-st->op->cond
-cond(yes)->e
-cond(no)->op
-```
+Term 2 with *inline markup*
 
-[========]
-                    
-### 绘制序列图 Sequence Diagram
-                    
-```seq
-Andrew->China: Says Hello 
-Note right of China: China thinks\nabout it 
-China-->Andrew: How are you? 
-Andrew->>China: I am good thanks!
-```
+:   Definition 2
 
-### End
+        { some code, part of Definition 2 }
+
+    Third paragraph of definition 2.
+
+_Compact style:_
+
+Term 1
+  ~ Definition 1
+
+Term 2
+  ~ Definition 2a
+  ~ Definition 2b
+
+
+### [Abbreviations](https://github.com/markdown-it/markdown-it-abbr)
+
+This is HTML abbreviation example.
+
+It converts "HTML", but keep intact partial entries like "xxxHTMLyyy" and so on.
+
+*[HTML]: Hyper Text Markup Language
+
+### [Custom containers](https://github.com/markdown-it/markdown-it-container)
+
+::: warning
+*here be dragons*
+:::
