@@ -1,143 +1,365 @@
-# Welcome to StackEdit!
+# Editor.md
 
-Hi! I'm your first Markdown file in **StackEdit**. If you want to learn about StackEdit, you can read me. If you want to play with Markdown, you can edit me. Once you have finished with me, you can create new files by opening the **file explorer** on the left corner of the navigation bar.
+![](https://pandao.github.io/editor.md/images/logos/editormd-logo-180x180.png)
 
+![](https://img.shields.io/github/stars/pandao/editor.md.svg) ![](https://img.shields.io/github/forks/pandao/editor.md.svg) ![](https://img.shields.io/github/tag/pandao/editor.md.svg) ![](https://img.shields.io/github/release/pandao/editor.md.svg) ![](https://img.shields.io/github/issues/pandao/editor.md.svg) ![](https://img.shields.io/bower/v/editor.md.svg)
 
-# Files
+**目录 (Table of Contents)**
 
-StackEdit stores your files in your browser, which means all your files are automatically saved locally and are accessible **offline!**
+[TOCM]
 
-## Create files and folders
+[TOC]
 
-The file explorer is accessible using the button in left corner of the navigation bar. You can create a new file by clicking the **New file** button in the file explorer. You can also create folders by clicking the **New folder** button.
+# Heading 1
+## Heading 2               
+### Heading 3
+#### Heading 4
+##### Heading 5
+###### Heading 6
+# Heading 1 link [Heading link](https://github.com/pandao/editor.md "Heading link")
+## Heading 2 link [Heading link](https://github.com/pandao/editor.md "Heading link")
+### Heading 3 link [Heading link](https://github.com/pandao/editor.md "Heading link")
+#### Heading 4 link [Heading link](https://github.com/pandao/editor.md "Heading link") Heading link [Heading link](https://github.com/pandao/editor.md "Heading link")
+##### Heading 5 link [Heading link](https://github.com/pandao/editor.md "Heading link")
+###### Heading 6 link [Heading link](https://github.com/pandao/editor.md "Heading link")
 
-## Switch to another file
+#### 标题（用底线的形式）Heading (underline)
 
-All your files and folders are presented as a tree in the file explorer. You can switch from one to another by clicking a file in the tree.
+This is an H1
+=============
 
-## Rename a file
+This is an H2
+-------------
 
-You can rename the current file by clicking the file name in the navigation bar or by clicking the **Rename** button in the file explorer.
+### 字符效果和横线等
+                
+----
 
-## Delete a file
+~~删除线~~ <s>删除线（开启识别HTML标签时）</s>
+*斜体字*      _斜体字_
+**粗体**  __粗体__
+***粗斜体*** ___粗斜体___
 
-You can delete the current file by clicking the **Remove** button in the file explorer. The file will be moved into the **Trash** folder and automatically deleted after 7 days of inactivity.
+上标：X<sub>2</sub>，下标：O<sup>2</sup>
 
-## Export a file
+**缩写(同HTML的abbr标签)**
 
-You can export the current file by clicking **Export to disk** in the menu. You can choose to export the file as plain Markdown, as HTML using a Handlebars template or as a PDF.
+> 即更长的单词或短语的缩写形式，前提是开启识别HTML标签时，已默认开启
 
+The <abbr title="Hyper Text Markup Language">HTML</abbr> specification is maintained by the <abbr title="World Wide Web Consortium">W3C</abbr>.
 
-# Synchronization
+### 引用 Blockquotes
 
-Synchronization is one of the biggest features of StackEdit. It enables you to synchronize any file in your workspace with other files stored in your **Google Drive**, your **Dropbox** and your **GitHub** accounts. This allows you to keep writing on other devices, collaborate with people you share the file with, integrate easily into your workflow... The synchronization mechanism takes place every minute in the background, downloading, merging, and uploading file modifications.
+> 引用文本 Blockquotes
 
-There are two types of synchronization and they can complement each other:
+引用的行内混合 Blockquotes
+                    
+> 引用：如果想要插入空白换行`即<br />标签`，在插入处先键入两个以上的空格然后回车即可，[普通链接](http://localhost/)。
 
-- The workspace synchronization will sync all your files, folders and settings automatically. This will allow you to fetch your workspace on any other device.
-	> To start syncing your workspace, just sign in with Google in the menu.
+### 锚点与链接 Links
 
-- The file synchronization will keep one file of the workspace synced with one or multiple files in **Google Drive**, **Dropbox** or **GitHub**.
-	> Before starting to sync files, you must link an account in the **Synchronize** sub-menu.
+[普通链接](http://localhost/)
 
-## Open a file
+[普通链接带标题](http://localhost/ "普通链接带标题")
 
-You can open a file from **Google Drive**, **Dropbox** or **GitHub** by opening the **Synchronize** sub-menu and clicking **Open from**. Once opened in the workspace, any modification in the file will be automatically synced.
+直接链接：<https://github.com>
 
-## Save a file
+[锚点链接][anchor-id] 
 
-You can save any file of the workspace to **Google Drive**, **Dropbox** or **GitHub** by opening the **Synchronize** sub-menu and clicking **Save on**. Even if a file in the workspace is already synced, you can save it to another location. StackEdit can sync one file with multiple locations and accounts.
+[anchor-id]: http://www.this-anchor-link.com/
 
-## Synchronize a file
+[mailto:test.test@gmail.com](mailto:test.test@gmail.com)
 
-Once your file is linked to a synchronized location, StackEdit will periodically synchronize it by downloading/uploading any modification. A merge will be performed if necessary and conflicts will be resolved.
+GFM a-tail link @pandao  邮箱地址自动链接 test.test@gmail.com  www@vip.qq.com
 
-If you just have modified your file and you want to force syncing, click the **Synchronize now** button in the navigation bar.
+> @pandao
 
-> **Note:** The **Synchronize now** button is disabled if you have no file to synchronize.
+### 多语言代码高亮 Codes
 
-## Manage file synchronization
+#### 行内代码 Inline code
 
-Since one file can be synced with multiple locations, you can list and manage synchronized locations by clicking **File synchronization** in the **Synchronize** sub-menu. This allows you to list and remove synchronized locations that are linked to your file.
+执行命令：`npm install marked`
 
+#### 缩进风格
 
-# Publication
+即缩进四个空格，也做为实现类似 `<pre>` 预格式化文本 ( Preformatted Text ) 的功能。
 
-Publishing in StackEdit makes it simple for you to publish online your files. Once you're happy with a file, you can publish it to different hosting platforms like **Blogger**, **Dropbox**, **Gist**, **GitHub**, **Google Drive**, **WordPress** and **Zendesk**. With [Handlebars templates](http://handlebarsjs.com/), you have full control over what you export.
+    <?php
+        echo "Hello world!";
+    ?>
+    
+预格式化文本：
 
-> Before starting to publish, you must link an account in the **Publish** sub-menu.
+    | First Header  | Second Header |
+    | ------------- | ------------- |
+    | Content Cell  | Content Cell  |
+    | Content Cell  | Content Cell  |
 
-## Publish a File
+#### JS代码　
 
-You can publish your file by opening the **Publish** sub-menu and by clicking **Publish to**. For some locations, you can choose between the following formats:
+```javascript
+function test() {
+	console.log("Hello world!");
+}
+ 
+(function(){
+    var box = function() {
+        return box.fn.init();
+    };
 
-- Markdown: publish the Markdown text on a website that can interpret it (**GitHub** for instance),
-- HTML: publish the file converted to HTML via a Handlebars template (on a blog for example).
+    box.prototype = box.fn = {
+        init : function(){
+            console.log('box.init()');
 
-## Update a publication
+			return this;
+        },
 
-After publishing, StackEdit keeps your file linked to that publication which makes it easy for you to re-publish it. Once you have modified your file and you want to update your publication, click on the **Publish now** button in the navigation bar.
+		add : function(str) {
+			alert("add", str);
 
-> **Note:** The **Publish now** button is disabled if your file has not been published yet.
+			return this;
+		},
 
-## Manage file publication
+		remove : function(str) {
+			alert("remove", str);
 
-Since one file can be published to multiple locations, you can list and manage publish locations by clicking **File publication** in the **Publish** sub-menu. This allows you to list and remove publication locations that are linked to your file.
+			return this;
+		}
+    };
+    
+    box.fn.init.prototype = box.fn;
+    
+    window.box =box;
+})();
 
-
-# Markdown extensions
-
-StackEdit extends the standard Markdown syntax by adding extra **Markdown extensions**, providing you with some nice features.
-
-> **ProTip:** You can disable any **Markdown extension** in the **File properties** dialog.
-
-
-## SmartyPants
-
-SmartyPants converts ASCII punctuation characters into "smart" typographic punctuation HTML entities. For example:
-
-|                |ASCII                          |HTML                         |
-|----------------|-------------------------------|-----------------------------|
-|Single backticks|`'Isn't this fun?'`            |'Isn't this fun?'            |
-|Quotes          |`"Isn't this fun?"`            |"Isn't this fun?"            |
-|Dashes          |`-- is en-dash, --- is em-dash`|-- is en-dash, --- is em-dash|
-
-
-## KaTeX
-
-You can render LaTeX mathematical expressions using [KaTeX](https://khan.github.io/KaTeX/):
-
-The *Gamma function* satisfying $\Gamma(n) = (n-1)!\quad\forall n\in\mathbb N$ is via the Euler integral
-
-$$
-\Gamma(z) = \int_0^\infty t^{z-1}e^{-t}dt\,.
-$$
-
-> You can find more information about **LaTeX** mathematical expressions [here](http://meta.math.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference).
-
-
-## UML diagrams
-
-You can render UML diagrams using [Mermaid](https://mermaidjs.github.io/). For example, this will produce a sequence diagram:
-
-```mermaid
-sequenceDiagram
-Alice ->> Bob: Hello Bob, how are you?
-Bob-->>John: How about you John?
-Bob--x Alice: I am good thanks!
-Bob-x John: I am good thanks!
-Note right of John: Bob thinks a long<br/>long time, so long<br/>that the text does<br/>not fit on a row.
-
-Bob-->Alice: Checking with John...
-Alice->John: Yes... John, how are you?
+var testBox = box();
+testBox.add("jQuery").remove("jQuery");
 ```
 
-And this will produce a flow chart:
+#### HTML 代码 HTML codes
 
-```mermaid
-graph LR
-A[Square Rect] -- Link text --> B((Circle))
-A --> C(Round Rect)
-B --> D{Rhombus}
-C --> D
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <mate charest="utf-8" />
+        <meta name="keywords" content="Editor.md, Markdown, Editor" />
+        <title>Hello world!</title>
+        <style type="text/css">
+            body{font-size:14px;color:#444;font-family: "Microsoft Yahei", Tahoma, "Hiragino Sans GB", Arial;background:#fff;}
+            ul{list-style: none;}
+            img{border:none;vertical-align: middle;}
+        </style>
+    </head>
+    <body>
+        <h1 class="text-xxl">Hello world!</h1>
+        <p class="text-green">Plain text</p>
+    </body>
+</html>
 ```
+
+### 图片 Images
+
+Image:
+
+![](https://pandao.github.io/editor.md/examples/images/4.jpg)
+
+> Follow your heart.
+
+![](https://pandao.github.io/editor.md/examples/images/8.jpg)
+
+> 图为：厦门白城沙滩
+
+图片加链接 (Image + Link)：
+
+[![](https://pandao.github.io/editor.md/examples/images/7.jpg)](https://pandao.github.io/editor.md/images/7.jpg "李健首张专辑《似水流年》封面")
+
+> 图为：李健首张专辑《似水流年》封面
+                
+----
+
+### 列表 Lists
+
+#### 无序列表（减号）Unordered Lists (-)
+                
+- 列表一
+- 列表二
+- 列表三
+     
+#### 无序列表（星号）Unordered Lists (*)
+
+* 列表一
+* 列表二
+* 列表三
+
+#### 无序列表（加号和嵌套）Unordered Lists (+)
+                
++ 列表一
++ 列表二
+    + 列表二-1
+    + 列表二-2
+    + 列表二-3
++ 列表三
+    * 列表一
+    * 列表二
+    * 列表三
+
+#### 有序列表 Ordered Lists (-)
+                
+1. 第一行
+2. 第二行
+3. 第三行
+
+#### GFM task list
+
+- [x] GFM task list 1
+- [x] GFM task list 2
+- [ ] GFM task list 3
+    - [ ] GFM task list 3-1
+    - [ ] GFM task list 3-2
+    - [ ] GFM task list 3-3
+- [ ] GFM task list 4
+    - [ ] GFM task list 4-1
+    - [ ] GFM task list 4-2
+                
+----
+                    
+### 绘制表格 Tables
+
+| 项目        | 价格   |  数量  |
+| --------   | -----:  | :----:  |
+| 计算机      | $1600   |   5     |
+| 手机        |   $12   |   12   |
+| 管线        |    $1    |  234  |
+                    
+First Header  | Second Header
+------------- | -------------
+Content Cell  | Content Cell
+Content Cell  | Content Cell 
+
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+
+| Function name | Description                    |
+| ------------- | ------------------------------ |
+| `help()`      | Display the help window.       |
+| `destroy()`   | **Destroy your computer!**     |
+
+| Left-Aligned  | Center Aligned  | Right Aligned |
+| :------------ |:---------------:| -----:|
+| col 3 is      | some wordy text | $1600 |
+| col 2 is      | centered        |   $12 |
+| zebra stripes | are neat        |    $1 |
+
+| Item      | Value |
+| --------- | -----:|
+| Computer  | $1600 |
+| Phone     |   $12 |
+| Pipe      |    $1 |
+                
+----
+
+#### 特殊符号 HTML Entities Codes
+
+&copy; &  &uml; &trade; &iexcl; &pound;
+&amp; &lt; &gt; &yen; &euro; &reg; &plusmn; &para; &sect; &brvbar; &macr; &laquo; &middot; 
+
+X&sup2; Y&sup3; &frac34; &frac14;  &times;  &divide;   &raquo;
+
+18&ordm;C  &quot;  &apos;
+
+[========]
+
+### Emoji表情 :smiley:
+
+> Blockquotes :star:
+
+#### GFM task lists & Emoji & fontAwesome icon emoji & editormd logo emoji :editormd-logo-5x:
+
+- [x] :smiley: @mentions, :smiley: #refs, [links](), **formatting**, and <del>tags</del> supported :editormd-logo:;
+- [x] list syntax required (any unordered or ordered list supported) :editormd-logo-3x:;
+- [x] [ ] :smiley: this is a complete item :smiley:;
+- [ ] []this is an incomplete item [test link](#) :fa-star: @pandao; 
+- [ ] [ ]this is an incomplete item :fa-star: :fa-gear:;
+    - [ ] :smiley: this is an incomplete item [test link](#) :fa-star: :fa-gear:;
+    - [ ] :smiley: this is  :fa-star: :fa-gear: an incomplete item [test link](#);
+ 
+#### 反斜杠 Escape
+
+\*literal asterisks\*
+
+[========]
+            
+### 科学公式 TeX(KaTeX)
+
+$$E=mc^2$$
+
+行内的公式$$E=mc^2$$行内的公式，行内的$$E=mc^2$$公式。
+
+$$x > y$$
+
+$$\(\sqrt{3x-1}+(1+x)^2\)$$
+                    
+$$\sin(\alpha)^{\theta}=\sum_{i=0}^{n}(x^i + \cos(f))$$
+
+多行公式：
+
+```math
+\displaystyle
+\left( \sum\_{k=1}^n a\_k b\_k \right)^2
+\leq
+\left( \sum\_{k=1}^n a\_k^2 \right)
+\left( \sum\_{k=1}^n b\_k^2 \right)
+```
+
+```katex
+\displaystyle 
+    \frac{1}{
+        \Bigl(\sqrt{\phi \sqrt{5}}-\phi\Bigr) e^{
+        \frac25 \pi}} = 1+\frac{e^{-2\pi}} {1+\frac{e^{-4\pi}} {
+        1+\frac{e^{-6\pi}}
+        {1+\frac{e^{-8\pi}}
+         {1+\cdots} }
+        } 
+    }
+```
+
+```latex
+f(x) = \int_{-\infty}^\infty
+    \hat f(\xi)\,e^{2 \pi i \xi x}
+    \,d\xi
+```
+
+### 分页符 Page break
+
+> Print Test: Ctrl + P
+
+[========]
+
+### 绘制流程图 Flowchart
+
+```flow
+st=>start: 用户登陆
+op=>operation: 登陆操作
+cond=>condition: 登陆成功 Yes or No?
+e=>end: 进入后台
+
+st->op->cond
+cond(yes)->e
+cond(no)->op
+```
+
+[========]
+                    
+### 绘制序列图 Sequence Diagram
+                    
+```seq
+Andrew->China: Says Hello 
+Note right of China: China thinks\nabout it 
+China-->Andrew: How are you? 
+Andrew->>China: I am good thanks!
+```
+
+### End
